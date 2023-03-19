@@ -8,17 +8,22 @@ const UserProvider = ({ children }) => {
     const [name, setName] = useState('');
     const [isAdmin, setIsAdmin] = useState(false);
 
+    // Ex 4 - Altere o jsx para exibir um botão de cadastro de curso, apenas se a pessoa logada tiver informação admin como true.
+    const [showCourseRegistrationButton, setShowCourseRegistrationButton] = useState(true);
+
     // Ex2 - 3. Crie uma função para inicializar/limpar as informações
     //     DICA: faça com que esta função receba por parâmetro todas as informações necessárias.
     //     Sugestão: name (string), isAdmin (boolean)
     const initializeUser = (name, isAdmin) => {
         setName(name);
         setIsAdmin(isAdmin);
+        setShowCourseRegistrationButton(isAdmin);
     };
 
     const clearUser = () => {
         setName('');
         setIsAdmin(false);
+        setShowCourseRegistrationButton(false);
     };
 
     // Ex2 - 4. Crie uma função para retornar se a pessoa usuária é admin ou não, retornar true ou false
@@ -29,6 +34,7 @@ const UserProvider = ({ children }) => {
     const contextValue = {
         name,
         isAdmin,
+        showCourseRegistrationButton,
         initializeUser,
         clearUser,
         isUserAdmin,
