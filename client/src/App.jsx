@@ -1,3 +1,4 @@
+import React, { useContext } from 'react';
 import Navbar from './components/Navbar';
 import PageWrapper from './components/PageWrapper';
 import Footer from './components/Footer';
