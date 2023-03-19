@@ -5,8 +5,33 @@
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png",
       "name": "React JS",
       "category": "front-end",
-      "description": "Curso sobre React Js",
+      "description": "Crie projetos completos com React, utilizando tecnologias em alta no mercado como styled components, React Router, context API e muito mais!",
+      "targetAudience": "Desenvolvedores front-end que desejam aprimorar seus conhecimentos de React; estudantes de front-end que querem colocar em prática os aprendizados de React.",
+      "content": [
+        "Criar aplicações completas com React",
+        "Utilização de todos os hooks do React",
+        "Gerenciamento de páginas com React Router",
+        "Gerenciamento de contexto com Context API",
+        "Estilização com Styled components"
+      ],
       "duration": 6
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/240px-JavaScript-logo.png",
+      "name": "Introdução ao JavaScript",
+      "category": "front-end",
+      "description": "Aprenda os fundamentos do JavaScript, a linguagem de programação mais popular para desenvolvimento web.",
+      "targetAudience": "Desenvolvedores iniciantes que desejam aprender a programar em JavaScript; estudantes de programação que querem adquirir conhecimentos básicos em JavaScript.",
+      "content": [
+        "Introdução aos conceitos básicos de programação em JavaScript",
+        "Variáveis, tipos de dados e operadores em JavaScript",
+        "Estruturas de controle de fluxo em JavaScript (if/else, switch/case, loops)",
+        "Funções em JavaScript",
+        "Manipulação de elementos HTML com JavaScript",
+        "Eventos em JavaScript"
+      ],
+      "duration": 4
     }
   ]
 }
