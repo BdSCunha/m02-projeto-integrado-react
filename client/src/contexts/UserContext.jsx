@@ -8,7 +8,7 @@ const UserProvider = ({ children }) => {
     const [name, setName] = useState('');
     const [isAdmin, setIsAdmin] = useState(false);
 
-    // Ex 4 - Altere o jsx para exibir um botão de cadastro de curso, apenas se a pessoa logada tiver informação admin como true.
+    // Ex 4 - Altere o jsx para exibir um botão de cadastro de curso, apenas se a pessoa logada tiver informação admin como `true`.
     const [showCourseRegistrationButton, setShowCourseRegistrationButton] = useState(true);
 
     // Ex2 - 3. Crie uma função para inicializar/limpar as informações
