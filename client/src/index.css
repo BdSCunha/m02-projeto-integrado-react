@@ -63,3 +63,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+a:link {
+  text-decoration: none;
+}

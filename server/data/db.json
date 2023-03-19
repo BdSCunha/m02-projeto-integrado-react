@@ -19,7 +19,7 @@
     {
       "id": 2,
       "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/240px-JavaScript-logo.png",
-      "name": "Introdução ao JavaScript",
+      "name": "JavaScript",
       "category": "front-end",
       "description": "Aprenda os fundamentos do JavaScript, a linguagem de programação mais popular para desenvolvimento web.",
       "targetAudience": "Desenvolvedores iniciantes que desejam aprender a programar em JavaScript; estudantes de programação que querem adquirir conhecimentos básicos em JavaScript.",
@@ -32,6 +32,73 @@
         "Eventos em JavaScript"
       ],
       "duration": 4
+    },
+    {
+      "id": 3,
+      "imageUrl": "https://www.alura.com.br/assets/api/cursos/512/react-modernizando-escrever-typescript.png",
+      "name": "React com TypeScript",
+      "category": "front-end",
+      "description": "Aprenda a criar aplicações completas com ReactJS e TypeScript, utilizando boas práticas de desenvolvimento e padrões de projeto.",
+      "targetAudience": "Desenvolvedores front-end que já possuem conhecimento em ReactJS e desejam aprender a utilizar TypeScript em seus projetos.",
+      "content": [
+        "Introdução ao TypeScript e suas principais características",
+        "Configuração do ambiente de desenvolvimento com TypeScript",
+        "Utilização de TypeScript com ReactJS",
+        "Gerenciamento de estado com Redux e TypeScript",
+        "Utilização de Hooks do React com TypeScript",
+        "Padrões de projeto com TypeScript"
+      ],
+      "duration": 8
+    },
+    {
+      "id": 4,
+      "imageUrl": "https://www.alura.com.br/assets/api/cursos/512/react-context-estados-globais-contextapi.png",
+      "name": "Context API em ReactJS",
+      "category": "front-end",
+      "description": "Aprenda a utilizar a Context API do ReactJS para gerenciamento de estado de forma eficiente em suas aplicações.",
+      "targetAudience": "Desenvolvedores front-end que já possuem conhecimento em ReactJS e desejam aprimorar o gerenciamento de estado em suas aplicações.",
+      "content": [
+        "Introdução à Context API",
+        "Utilização da Context API para gerenciamento de estado em ReactJS",
+        "Criação e consumo de contextos",
+        "Trabalhando com múltiplos contextos",
+        "Melhores práticas no uso da Context API"
+      ],
+      "duration": 5
+    },
+    {
+      "id": 5,
+      "imageUrl": "https://miro.medium.com/v2/resize:fit:512/1*0FyDA9f-ncxV0eK7OqtR9A.png",
+      "name": "React Router",
+      "category": "front-end",
+      "description": "Aprenda a utilizar o React Router para gerenciamento de rotas em aplicações ReactJS.",
+      "targetAudience": "Desenvolvedores front-end que já possuem conhecimento em ReactJS e desejam aprimorar o gerenciamento de rotas em suas aplicações.",
+      "content": [
+        "Introdução ao React Router",
+        "Configuração do React Router em aplicações ReactJS",
+        "Gerenciamento de rotas com o React Router",
+        "Navegação entre rotas com o React Router",
+        "Passagem de parâmetros entre rotas",
+        "Rotas protegidas com autenticação"
+      ],
+      "duration": 6
+    },
+    {
+      "id": 6,
+      "imageUrl": "https://sbr-technologies.com/wp-content/uploads/2021/06/angular-logo.png",
+      "name": "Angular",
+      "category": "front-end",
+      "description": "Aprenda a desenvolver um CRUD MVC em Angular.",
+      "targetAudience": "Pessoas com conhecimentos em HTML, CSS, Javascript e Typescript, que estão buscando aprender como desenvolver um CRUD com Angular.",
+      "content": [
+        "Conhecendo o Angular",
+        "Entendendo o fluxo de dados",
+        "Navegação com roteamento",
+        "Diretivas",
+        "Comunicação com o Backend",
+        "Requisições HTTP"
+      ],
+      "duration": 9
     }
   ]
 }

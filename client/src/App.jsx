@@ -23,6 +23,8 @@ function App() {
             */}
             <Routes>
               <Route index element={<HomePage />} />
+
+              {/* Ex 7 - 3. Nas rotas, conferir se a rota para essa página de detalhes está criada (se não estiver, crie). */}
               <Route element={<CourseDetailsPage />} path="/course/:id" />
             </Routes>
           </PageWrapper>
