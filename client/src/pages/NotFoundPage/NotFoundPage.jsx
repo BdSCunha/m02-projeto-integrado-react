@@ -8,7 +8,7 @@ const NotFoundPageContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: var(--spacing-6);
+  gap: ${({ theme }) => theme.spacing6};
 `
 
 const NotFoundPageContainerImg = styled.img`
@@ -17,11 +17,11 @@ const NotFoundPageContainerImg = styled.img`
 
 const NotFoundPageContainerH2 = styled.h2`
   font-family: "Inter";
-  font-style: var(--font-bold);
+  font-style: ${({ theme }) => theme.fontBold};
   font-weight: 700;
   font-size: 36px;
   line-height: 44px;
-  color: var(--primary);
+  color: ${({ theme }) => theme.primary};
   text-align: center;
 `
 

@@ -27,11 +27,11 @@ const RegisterPageSectionCard = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: var(--spacing-5);
+  gap: ${({ theme }) => theme.spacing5};
 `
 
 const RegisterPageSectionTitle = styled.h1`
-  color: var(--primary);
+  color: ${({ theme }) => theme.primary};
   font-size: 20px;
   text-align: center;
   width: 100%;
@@ -41,26 +41,26 @@ const RegisterPageSectionForm = styled.form`
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: var(--spacing-5);
+  gap: ${({ theme }) => theme.spacing5};
 `
 
 const RegisterPageSectionFormRow = styled.div`
   display: flex;
-  gap: var(--spacing-4);
+  gap: ${({ theme }) => theme.spacing4};
 `
 
 const RegisterPageSectionFormColumn = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: var(--spacing-5);
+  gap: ${({ theme }) => theme.spacing5};
 `
 
 const RegisterPageSectionFormGroup = styled.div`
   display: flex;
   flex: 1;
   align-items: flex-end;
-  gap: var(--spacing-5);
+  gap: ${({ theme }) => theme.spacing5};
 `
 
 const RegisterPageSectionFormFooter = styled.div`
@@ -68,26 +68,26 @@ const RegisterPageSectionFormFooter = styled.div`
   flex: 1;
   flex-direction: column;
   align-items: center;
-  gap: var(--spacing-5);
+  gap: ${({ theme }) => theme.spacing5};
 `
 
 const RegisterPageSectionFormGroupContent = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-3);
+  gap: ${({ theme }) => theme.spacing3};
 `
 
 const RegisterPageSectionFormGroupContentItem = styled.li`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--light-gray);
-  border-radius: var(--border-radius-1);
-  padding: var(--spacing-4);
+  background-color: ${({ theme }) => theme.lightGray};
+  border-radius: ${({ theme }) => theme.borderRadius1};
+  padding: ${({ theme }) => theme.spacing4};
   font-size: 12px;
   line-height: 15px;
-  font-weight: var(--font-bold);
-  color: var(--secondary);
+  font-weight: ${({ theme }) => theme.fontBold};
+  color: ${({ theme }) => theme.secondary};
 `
 
 const schema = yup.object().shape({

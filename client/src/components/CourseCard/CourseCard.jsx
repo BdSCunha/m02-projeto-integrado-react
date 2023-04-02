@@ -7,33 +7,33 @@ import Button, { BUTTON_VARIANT } from '../Button'
 
 const CourseCardContainer = styled.div`
   width: 310px;
-  padding: var(--spacing-6) var(--spacing-8);
-  border-radius: var(--border-radius-1);
-  background-color: var(--white);
+  padding: ${({ theme }) => theme.spacing6} ${({ theme }) => theme.spacing8};
+  border-radius: ${({ theme }) => theme.borderRadius1};
+  background-color: ${({ theme }) => theme.white};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: var(--spacing-4);
+  gap: ${({ theme }) => theme.spacing4};
 `
 
 const CourseCardHeader = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  gap: var(--spacing-4);
-  color: var(--primary);
+  gap: ${({ theme }) => theme.spacing4};
+  color: ${({ theme }) => theme.primary};
 `
 
 const CourseCardDuration = styled.div`
   display: flex;
-  gap: var(--spacing-3);
+  gap: ${({ theme }) => theme.spacing3};
   align-items: center;
-  font-weight: var(--font-medium);
+  font-weight: ${({ theme }) => theme.fontMedium};
   font-size: 16px;
   line-height: 19px;
-  color: var(--dark-gray);
+  color: ${({ theme }) => theme.darkGray};
 `
 
 function CourseCard({ id, imageUrl, name, category, description, duration }) {

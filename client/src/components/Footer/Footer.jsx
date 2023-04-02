@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
 const StyledFooter = styled.footer`
-  padding: var(--spacing-7);
+  padding: ${({ theme }) => theme.spacing7};
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--dark-gray);
+  color: ${({ theme }) => theme.darkGray};
 `
 
 function Footer() {

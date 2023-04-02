@@ -5,8 +5,8 @@ import { useUserInfo, useSetUserInfo } from '../../hooks/useUserInfo'
 
 const NavbarContainer = styled.header`
   height: 98px;
-  padding: 0 var(--spacing-7);
-  background-color: var(--light-gray);
+  padding: 0 ${({ theme }) => theme.spacing7};
+  background-color: ${({ theme }) => theme.lightGray};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,14 +14,14 @@ const NavbarContainer = styled.header`
 
 const NavbarLogoBox = styled(Link)`
   display: flex;
-  gap: var(--spacing-4);
+  gap: ${({ theme }) => theme.spacing4};
   text-decoration: none;
 `
 
 const NavbarLogoText = styled.h1`
   font-size: 36px;
   line-height: 44px;
-  color: var(--primary);
+  color: ${({ theme }) => theme.primary};
 `
 
 function Navbar() {

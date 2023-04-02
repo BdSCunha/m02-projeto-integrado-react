@@ -13,7 +13,7 @@ import styled from 'styled-components'
 const HomePageContainer = styled.div`
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-6);
+  gap: ${({ theme }) => theme.spacing6};
 `
 
 const ListHeader = styled.div`

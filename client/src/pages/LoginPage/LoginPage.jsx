@@ -11,7 +11,7 @@ const LoginPageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--spacing-6);
+  gap: ${({ theme }) => theme.spacing6};
 `
 
 const LoginCenterBox = styled.div`
@@ -19,22 +19,22 @@ const LoginCenterBox = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: var(--spacing-6) var(--spacing-8);
-  gap: var(--spacing-6);
+  padding: ${({ theme }) => theme.spacing6} ${({ theme }) => theme.spacing8};
+  gap: ${({ theme }) => theme.spacing6};
   width: 454px;
   max-width: 100%;
-  background: var(--white);
-  box-shadow: 0 var(--spacing-2) var(--spacing-2) rgba(0, 0, 0, 0.25);
-  border-radius: var(--border-radius-1);
+  background: ${({ theme }) => theme.white};
+  box-shadow: 0 ${({ theme }) => theme.spacing2} ${({ theme }) => theme.spacing2} rgba(0, 0, 0, 0.25);
+  border-radius: ${({ theme }) => theme.borderRadius1};
 `
 
 const LoginCenterBoxH2Title = styled.h2`
   font-family: "Inter";
   font-style: normal;
-  font-weight: var(--font-bold);
+  font-weight: ${({ theme }) => theme.fontBold};
   font-size: 20px;
   line-height: 24px;
-  color: var(--primary);
+  color: ${({ theme }) => theme.primary};
 `
 
 const LoginCenterBoxDivLoginForm = styled.div`
@@ -45,17 +45,17 @@ const LoginCenterBoxDivLoginForm = styled.div`
 `
 
 const LoginCenterBoxPErrorMessage = styled.p`
-  color: var(--secondary);
+  color: ${({ theme }) => theme.secondary};
 `
 const LoginCenterBoxASigninButton = styled(Link)`
   font-family: "Inter";
   font-style: normal;
-  font-weight: var(--font-bold);
+  font-weight: ${({ theme }) => theme.fontBold};
   font-size: 14px;
   line-height: 17px;
   text-decoration-line: underline;
   text-transform: capitalize;
-  color: var(--primary);
+  color: ${({ theme }) => theme.primary};
 `
 
 const LoginForm = styled.form`

@@ -9,9 +9,9 @@ const StyledButton = styled.button`
   align-items: center;
   cursor: pointer;
   text-transform: uppercase;
-  font-weight: var(--font-bold);
-  padding: var(--spacing-3) var(--spacing-5);
-  border-radius: var(--border-radius-2);
+  font-weight: ${({ theme }) => theme.fontBold};
+  padding: ${({ theme }) => theme.spacing3} ${({ theme }) => theme.spacing5};
+  border-radius: ${({ theme }) => theme.borderRadius2};
   transition: 0.3s;
 
   &:disabled {
@@ -19,68 +19,68 @@ const StyledButton = styled.button`
     opacity: 0.5;
   }
 
-  ${({ variant }) => {
+  ${({ variant, theme }) => {
     const variantStyles = {
       [BUTTON_VARIANT.PRIMARY]: css`
-        border: 1px solid var(--primary);
-        color: var(--white);
-        background-color: var(--primary);
+        border: 1px solid ${theme.primary};
+        color: ${theme.white};
+        background-color: ${theme.primary};
 
         &:hover:not(:disabled) {
-          background-color: var(--primary-outlined);
+          background-color: ${theme.primaryOutlined};
         }
       `,
       [BUTTON_VARIANT.SECONDARY]: css`
-        border: 1px solid var(--secondary);
-        color: var(--white);
-        background-color: var(--secondary);
+        border: 1px solid ${theme.secondary};
+        color: ${theme.white};
+        background-color: ${theme.secondary};
 
         &:hover:not(:disabled) {
-          background-color: var(--secondary-outlined);
+          background-color: ${theme.secondaryOutlined};
         }
       `,
       [BUTTON_VARIANT.PRIMARY_OUTLINED]: css`
-        border: 1px solid var(--primary);
-        color: var(--primary);
+        border: 1px solid ${theme.primary};
+        color: ${theme.primary};
         background-color: transparent;
 
         &:hover:not(:disabled) {
-          background-color: var(--primary-outlined);
+          background-color: ${theme.primaryOutlined};
         }
       `,
       [BUTTON_VARIANT.SECONDARY_OUTLINED]: css`
-        border: 1px solid var(--secondary);
-        color: var(--secondary);
+        border: 1px solid ${theme.secondary};
+        color: ${theme.secondary};
         background-color: transparent;
 
         &:hover:not(:disabled) {
-          background-color: var(--secondary-outlined);
+          background-color: ${theme.secondaryOutlined};
         }
       `,
       [BUTTON_VARIANT.PRIMARY_LINK]: css`
         border: none;
-        color: var(--primary);
+        color: ${theme.primary};
         background-color: transparent;
         text-decoration: underline;
         text-transform: none;
         border: 1px solid transparent;
 
         &:hover:not(:disabled) {
-          border: 1px solid var(--primary);
-          background-color: var(--primary-outlined);
+          border: 1px solid ${theme.primary};
+          background-color: ${theme.primaryOutlined};
         }
       `,
       [BUTTON_VARIANT.SECONDARY_LINK]: css`
         border: none;
-        color: var(--secondary);
+        color: ${theme.secondary};
         background-color: transparent;
         text-decoration: underline;
         text-transform: none;
         border: 1px solid transparent;
 
         &:hover:not(:disabled) {
-          border: 1px solid var(--secondary);
-          background-color: var(--secondary-outlined);
+          border: 1px solid ${theme.secondary};
+          background-color: ${theme.secondaryOutlined};
         }
       `
     }
@@ -88,11 +88,11 @@ const StyledButton = styled.button`
     return variantStyles[variant] || variantStyles[BUTTON_VARIANT.PRIMARY]
   }}
 
-  ${({ isIconButton }) =>
+  ${({ isIconButton, theme }) =>
     isIconButton &&
     css`
-      border-radius: var(--border-radius-3);
-      padding: var(--spacing-3);
+      border-radius: ${theme.borderRadius3};
+      padding: ${theme.spacing3};
     `}
 `
 

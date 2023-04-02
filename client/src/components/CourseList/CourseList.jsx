@@ -6,7 +6,7 @@ const CourseListContainer = styled.div`
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacing-6) var(--spacing-8);
+  gap: ${({ theme }) => theme.spacing6} ${({ theme }) => theme.spacing8};
 `
 
 function CourseList({ list }) {

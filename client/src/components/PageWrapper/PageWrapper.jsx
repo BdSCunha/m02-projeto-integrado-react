@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const PageWrapperContainer = styled.main`
-  padding: var(--spacing-9) var(--spacing-10);
+  padding: ${({ theme }) => theme.spacing9} ${({ theme }) => theme.spacing10};
   display: flex;
   flex-direction: column;
   flex-grow: 1;

@@ -9,7 +9,7 @@ const CourseDetailsPageContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--spacing-5);
+  gap: ${({ theme }) => theme.spacing5};
 `
 
 const CourseDetailsCenterBox = styled.div`
@@ -19,11 +19,11 @@ const CourseDetailsCenterBox = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: var(--spacing-6) var(--spacing-8);
-  gap: var(--spacing-6);
-  background: var(--white);
-  box-shadow: 0 var(--spacing-2) var(--spacing-2) rgba(0, 0, 0, 0.25);
-  border-radius: var(--border-radius-1);
+  padding: ${({ theme }) => theme.spacing6} ${({ theme }) => theme.spacing8};
+  gap: ${({ theme }) => theme.spacing6};
+  background: ${({ theme }) => theme.white};
+  box-shadow: 0 ${({ theme }) => theme.spacing2} ${({ theme }) => theme.spacing2} rgba(0, 0, 0, 0.25);
+  border-radius: ${({ theme }) => theme.borderRadius1};
 `
 
 function CourseDetailsPage() {

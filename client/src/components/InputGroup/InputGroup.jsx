@@ -5,45 +5,45 @@ import styled from 'styled-components'
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-2);
+  gap: ${({ theme }) => theme.spacing2};
   flex: 1;
 `
 
 const Label = styled.label`
-  color: var(--primary);
-  font-weight: var(--font-bold);
+  color: ${({ theme }) => theme.primary};
+  font-weight: ${({ theme }) => theme.fontBold};
   font-size: 12px;
 `
 
 const Input = styled.input`
-  border: 1px solid var(--dark-gray);
-  background-color: var(--white);
-  border-radius: var(--border-radius-1);
-  padding: var(--spacing-3);
-  color: var(--dark-gray);
+  border: 1px solid ${({ theme }) => theme.darkGray};
+  background-color: ${({ theme }) => theme.white};
+  border-radius: ${({ theme }) => theme.borderRadius1};
+  padding: ${({ theme }) => theme.spacing3};
+  color: ${({ theme }) => theme.darkGray};
 
   &:focus {
-    border: 1px solid var(--primary);
+    border: 1px solid ${({ theme }) => theme.primary};
   }
 
   &:focus-visible {
-    border: 1px solid var(--primary);
-    outline-color: var(--primary);
+    border: 1px solid ${({ theme }) => theme.primary};
+    outline-color: ${({ theme }) => theme.primary};
     outline-width: thin;
     outline-style: solid;
   }
 
   &::placeholder {
-    font-weight: var(--font-weight-regular);
+    font-weight: ${({ theme }) => theme.fontRegular};
     font-size: 12px;
-    color: var(--secondary);
+    color: ${({ theme }) => theme.secondary};
   }
 `
 
 const Error = styled.span`
-  color: var(--secondary);
+  color: ${({ theme }) => theme.secondary};
   font-size: 10px;
-  font-weight: var(--font-weight-bold);
+  font-weight: ${({ theme }) => theme.fontBold};
   font-style: italic;
 `
 

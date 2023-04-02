@@ -8,7 +8,7 @@ import styled from 'styled-components'
 const CourseFilterContainer = styled.div`
   display: flex;
   align-items: flex-end;
-  gap: var(--spacing-6);
+  gap: ${({ theme }) => theme.spacing6};
   width: 50%;
 `
 
