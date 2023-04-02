@@ -1,7 +1,28 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom'
+import styled from 'styled-components'
 import Button, { BUTTON_VARIANT } from '../Button'
 import { useUserInfo, useSetUserInfo } from '../../hooks/useUserInfo'
-import './Navbar.css'
+
+const NavbarContainer = styled.header`
+  height: 98px;
+  padding: 0 var(--spacing-7);
+  background-color: var(--light-gray);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
+
+const NavbarLogoBox = styled(Link)`
+  display: flex;
+  gap: var(--spacing-4);
+  text-decoration: none;
+`
+
+const NavbarLogoText = styled.h1`
+  font-size: 36px;
+  line-height: 44px;
+  color: var(--primary);
+`
 
 function Navbar() {
   const location = useLocation()
@@ -21,11 +42,11 @@ function Navbar() {
   }
 
   return (
-    <header className="navbarContainer">
-      <Link to="/" className="navbarLogoBox">
+    <NavbarContainer>
+      <NavbarLogoBox to="/">
         <img src="/logo.png" alt="Logo" />
-        <h1>DEVinCursos</h1>
-      </Link>
+        <NavbarLogoText>DEVinCursos</NavbarLogoText>
+      </NavbarLogoBox>
       {location.pathname !== '/login' && (
         <Button
           variant={BUTTON_VARIANT.PRIMARY_OUTLINED}
@@ -34,7 +55,7 @@ function Navbar() {
           {isLoggedIn ? 'Sair' : 'Entrar'}
         </Button>
       )}
-    </header>
+    </NavbarContainer>
   )
 }
 

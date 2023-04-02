@@ -1,10 +1,17 @@
 import PropTypes from 'prop-types'
 import CourseCard from '../CourseCard'
-import './CourseList.css'
+import styled from 'styled-components'
+
+const CourseListContainer = styled.div`
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-6) var(--spacing-8);
+`
 
 function CourseList({ list }) {
   return (
-    <ul className="courseListContainer">
+    <CourseListContainer>
       {list.map((course) => (
         <li key={course.id}>
           <CourseCard
@@ -17,7 +24,7 @@ function CourseList({ list }) {
           />
         </li>
       ))}
-    </ul>
+    </CourseListContainer>
   )
 }
 

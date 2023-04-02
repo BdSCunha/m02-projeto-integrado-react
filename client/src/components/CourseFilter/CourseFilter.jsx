@@ -3,8 +3,14 @@ import PropTypes from 'prop-types'
 
 import Button, { BUTTON_VARIANT } from '../Button'
 import InputGroup from '../InputGroup'
+import styled from 'styled-components'
 
-import './CourseFilter.css'
+const CourseFilterContainer = styled.div`
+  display: flex;
+  align-items: flex-end;
+  gap: var(--spacing-6);
+  width: 50%;
+`
 
 function CourseFilter({ onFilter }) {
   const [filter, setFilter] = useState('')
@@ -18,7 +24,7 @@ function CourseFilter({ onFilter }) {
   }
 
   return (
-    <div className="courseFilterContainer">
+    <CourseFilterContainer>
       <InputGroup
         type="text"
         placeholder="Busque pelo nome do curso"
@@ -33,7 +39,7 @@ function CourseFilter({ onFilter }) {
       >
         Buscar
       </Button>
-    </div>
+    </CourseFilterContainer>
   )
 }
 

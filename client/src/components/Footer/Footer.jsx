@@ -1,10 +1,18 @@
-import './Footer.css'
+import styled from 'styled-components'
+
+const StyledFooter = styled.footer`
+  padding: var(--spacing-7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark-gray);
+`
 
 function Footer() {
   return (
-    <footer className="footerContainer">
+    <StyledFooter>
       <p>DEVinCursos | {new Date().getFullYear()}</p>
-    </footer>
+    </StyledFooter>
   )
 }
 
