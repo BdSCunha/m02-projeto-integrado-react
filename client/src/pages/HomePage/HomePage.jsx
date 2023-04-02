@@ -8,8 +8,19 @@ import useCourseList from '../../hooks/useCourseList'
 import { useUserIsAdmin } from '../../hooks/useUserInfo'
 
 import emptyState from '../../assets/empty.svg'
+import styled from 'styled-components'
 
-import './HomePage.css'
+const HomePageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+`
+
+const ListHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+`
 
 function HomePage() {
   const { courses, error, isLoading, fetchData } = useCourseList()
@@ -17,8 +28,8 @@ function HomePage() {
   const navigate = useNavigate()
 
   return (
-    <div className="homePageContainer">
-      <div className="listHeader">
+    <HomePageContainer>
+      <ListHeader>
         <CourseFilter onFilter={fetchData} />
         {userIsAdmin && (
           <Button
@@ -28,7 +39,7 @@ function HomePage() {
             Cadastrar Curso
           </Button>
         )}
-      </div>
+      </ListHeader>
 
       {isLoading && <Spinner width={100} />}
 
@@ -45,7 +56,7 @@ function HomePage() {
           alt="Imagem de nenhum item encontrado"
         />
       )}
-    </div>
+    </HomePageContainer>
   )
 }
 

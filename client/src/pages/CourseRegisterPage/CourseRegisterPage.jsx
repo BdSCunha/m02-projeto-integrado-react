@@ -4,13 +4,91 @@ import { useNavigate } from 'react-router-dom'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { Trash } from 'phosphor-react'
 import * as yup from 'yup'
+import styled from 'styled-components'
 
 import Card from '../../components/Card'
 import InputGroup from '../../components/InputGroup'
 import Button, { BUTTON_VARIANT } from '../../components/Button'
 import useCourseRegister from '../../hooks/useCourseRegister'
 
-import './CourseRegisterPage.css'
+const RegisterPageContainer = styled.div`
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+`
+
+const RegisterPageSection = styled.section`
+  width: 828px;
+  max-width: 100%;
+`
+
+const RegisterPageSectionCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--spacing-5);
+`
+
+const RegisterPageSectionTitle = styled.h1`
+  color: var(--primary);
+  font-size: 20px;
+  text-align: center;
+  width: 100%;
+`
+
+const RegisterPageSectionForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--spacing-5);
+`
+
+const RegisterPageSectionFormRow = styled.div`
+  display: flex;
+  gap: var(--spacing-4);
+`
+
+const RegisterPageSectionFormColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--spacing-5);
+`
+
+const RegisterPageSectionFormGroup = styled.div`
+  display: flex;
+  flex: 1;
+  align-items: flex-end;
+  gap: var(--spacing-5);
+`
+
+const RegisterPageSectionFormFooter = styled.div`
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-5);
+`
+
+const RegisterPageSectionFormGroupContent = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+`
+
+const RegisterPageSectionFormGroupContentItem = styled.li`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--light-gray);
+  border-radius: var(--border-radius-1);
+  padding: var(--spacing-4);
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: var(--font-bold);
+  color: var(--secondary);
+`
 
 const schema = yup.object().shape({
   name: yup.string().required('Campo obrigatório'),
@@ -75,18 +153,14 @@ function CourseRegisterPage() {
   }
 
   return (
-    <div className="register-page-container">
-      <section className="register-page-section">
+    <RegisterPageContainer>
+      <RegisterPageSection>
         <Card>
-          <div className="register-page-section-card">
-            <h1 className="register-page-section-title">Cadastrar Curso</h1>
-
-            <form
-              className="register-page-section-form"
-              onSubmit={handleSubmit(onSubmit)}
-            >
-              <div className="register-page-section-form-row">
-                <div className="register-page-section-form-column">
+          <RegisterPageSectionCard>
+            <RegisterPageSectionTitle>Cadastrar Curso</RegisterPageSectionTitle>
+            <RegisterPageSectionForm onSubmit={handleSubmit(onSubmit)}>
+              <RegisterPageSectionFormRow>
+                <RegisterPageSectionFormColumn>
                   <InputGroup
                     labelText="Nome"
                     placeholder="Nome do curso"
@@ -105,9 +179,9 @@ function CourseRegisterPage() {
                     helperText={errors?.description?.message}
                     {...register('description')}
                   />
-                </div>
+                </RegisterPageSectionFormColumn>
 
-                <div className="register-page-section-form-column">
+                <RegisterPageSectionFormColumn>
                   <InputGroup
                     labelText="Url ícone"
                     placeholder="Url contendo ícone"
@@ -126,10 +200,10 @@ function CourseRegisterPage() {
                     helperText={errors?.targetMarket?.message}
                     {...register('targetMarket')}
                   />
-                </div>
-              </div>
+                </RegisterPageSectionFormColumn>
+              </RegisterPageSectionFormRow>
 
-              <div className="register-page-section-form-group">
+              <RegisterPageSectionFormGroup>
                 <InputGroup
                   labelText="Conteúdo"
                   placeholder="Conteúdo do curso"
@@ -147,14 +221,11 @@ function CourseRegisterPage() {
                     Adicionar
                   </Button>
                 </div>
-              </div>
+              </RegisterPageSectionFormGroup>
 
-              <ul className="register-page-section-form-group-content">
+              <RegisterPageSectionFormGroupContent>
                 {fields.map((field, index) => (
-                  <li
-                    key={field.id}
-                    className="register-page-section-form-group-content-item"
-                  >
+                  <RegisterPageSectionFormGroupContentItem key={field.id}>
                     <p>{field.text}</p>
 
                     <Button
@@ -165,11 +236,11 @@ function CourseRegisterPage() {
                     >
                       <Trash size={16} />
                     </Button>
-                  </li>
+                  </RegisterPageSectionFormGroupContentItem>
                 ))}
-              </ul>
+              </RegisterPageSectionFormGroupContent>
 
-              <div className="register-page-section-form-footer">
+              <RegisterPageSectionFormFooter>
                 <div>
                   <Button type="submit" disabled={isSubmitting}>
                     Cadastrar
@@ -184,12 +255,12 @@ function CourseRegisterPage() {
                     Cancelar
                   </Button>
                 </div>
-              </div>
-            </form>
-          </div>
+              </RegisterPageSectionFormFooter>
+            </RegisterPageSectionForm>
+          </RegisterPageSectionCard>
         </Card>
-      </section>
-    </div>
+      </RegisterPageSection>
+    </RegisterPageContainer>
   )
 }
 
