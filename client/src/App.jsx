@@ -12,6 +12,7 @@ import LoginPage from './pages/LoginPage'
 import CourseDetailsPage from './pages/CourseDetailsPage'
 import NotFoundPage from './pages/NotFoundPage'
 import CourseRegisterPage from './pages/CourseRegisterPage'
+import SignUpPage from './pages/SignUpPage/SignUpPage'
 
 function App() {
   const [globalState, setGlobalState] = useState()
@@ -28,6 +29,7 @@ function App() {
             <Route path="/course/register" element={<CourseRegisterPage />} />
             <Route path="/course/:id" element={<CourseDetailsPage />} />
             <Route path="*" element={<NotFoundPage />} />
+            <Route path="/signup" element={<SignUpPage />} />
           </Routes>
         </PageWrapper>
 
